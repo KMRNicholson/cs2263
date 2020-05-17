@@ -260,7 +260,9 @@ int main( int argc, char **argv )
 			}
 		}
 
-		successful_instructions++;
+		if(!stop_execution){
+			successful_instructions++;
+		}
 	}
 
 	printf("Successfully executed %d instructions\n", successful_instructions);
