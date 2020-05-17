@@ -226,10 +226,10 @@ int main( int argc, char **argv )
 	{
 		// read the input instruction (a single character)
 		char input_instruction = 0;
-		scanf("%c", &input_instruction);
+		in_read = scanf("%c", &input_instruction);
 
 		// the character could be a whitespace so we need to skip those
-		if( false == is_whitespace(input_instruction) )
+		if( false == is_whitespace(input_instruction) || in_read != 1 )
 		{
 			switch(input_instruction){
 				case 'u':
@@ -265,6 +265,7 @@ int main( int argc, char **argv )
 					stop_execution = true;
 					break;
 				default:
+					printf("invalid instruction %c", input_instruction);
 					break;
 			}
 		}
