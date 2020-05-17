@@ -14,7 +14,7 @@ FILE_ONE="$1"
 FILE_TWO="$2"
 
 # verify two files passed via the arguments for this script are equal using the `diff` command
-diff ${FILE_ONE} ${FILE_TWO} > /dev/null
+diff ${FILE_ONE} ${FILE_TWO} > ./diffs
 
 # get the exit code of diff 
 RETURN_CODE="$?"
