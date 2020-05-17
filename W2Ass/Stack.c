@@ -74,10 +74,12 @@ void print_stack(int *stack, int *size)
 bool push(int *stack, int *size, int max_size, int to_push)
 {
 	bool result = false;
+	int sp = *size;
 	
 	if(*size < max_size){
-		stack[*size] = to_push;
-		*size++;
+		stack[sp] = to_push;
+		sp++;
+		*size = sp;
 		result = true;
 	}
 
@@ -102,10 +104,12 @@ bool push(int *stack, int *size, int max_size, int to_push)
 bool pop(int *stack, int *size, int *to_return)
 {
 	bool result = false;
+	int sp = *size;
 
 	if(*size > 1){
-		*to_return = stack[*size];
-		*size--;
+		*to_return = stack[sp];
+		sp--;
+		*size = sp;
 		result = true;
 	}
 
@@ -130,9 +134,10 @@ bool pop(int *stack, int *size, int *to_return)
 bool peek(int *stack, int *size, int *to_return)
 {
 	bool result = false;
+	int sp = *size;
 
 	if(*size > 1){
-		*to_return = stack[*size];
+		*to_return = stack[sp];
 		result = true;
 	}
 
