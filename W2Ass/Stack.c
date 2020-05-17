@@ -76,7 +76,7 @@ bool push(int *stack, int *size, int max_size, int to_push)
 	bool result = false;
 	int sp = *size;
 	
-	if(*size < max_size){
+	if(sp < max_size){
 		stack[sp] = to_push;
 		sp++;
 		*size = sp;
@@ -106,7 +106,7 @@ bool pop(int *stack, int *size, int *to_return)
 	bool result = false;
 	int sp = *size;
 
-	if(*size > 0){
+	if(sp > 0){
 		*to_return = stack[sp];
 		sp--;
 		*size = sp;
@@ -136,7 +136,7 @@ bool peek(int *stack, int *size, int *to_return)
 	bool result = false;
 	int sp = *size;
 
-	if(*size > 0){
+	if(sp > 0){
 		*to_return = stack[sp];
 		result = true;
 	}
