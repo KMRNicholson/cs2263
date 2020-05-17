@@ -259,6 +259,8 @@ int main( int argc, char **argv )
 					break;
 			}
 		}
+
+		successful_instructions++;
 	}
 
 	printf("Successfully executed %d instructions\n", successful_instructions);
