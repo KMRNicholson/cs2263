@@ -233,6 +233,7 @@ int main( int argc, char **argv )
 					}else{
 						if(push(stack, &stack_current_size, stack_max_size, val)){
 							printf("%d\n", val);
+							successful_instructions++;
 						}else{
 							printf("failed push\n");
 						}
@@ -241,6 +242,7 @@ int main( int argc, char **argv )
 				case 'o':
 					if(pop(stack, &stack_current_size, &val)){
 						printf("%d\n", val);
+						successful_instructions++;
 					}else{
 						printf("failed pop\n");
 					}
@@ -248,6 +250,7 @@ int main( int argc, char **argv )
 				case 'e':
 					if(peek(stack, &stack_current_size, &val)){
 						printf("%d\n", val);
+						successful_instructions++;
 					}else{
 						printf("failed peek\n");
 					}
@@ -258,10 +261,6 @@ int main( int argc, char **argv )
 				default:
 					break;
 			}
-		}
-
-		if(!stop_execution){
-			successful_instructions++;
 		}
 	}
 
