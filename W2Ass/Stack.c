@@ -219,23 +219,25 @@ int main( int argc, char **argv )
 	// variable to hold popped/peeked value, as well as the value to push.
 	int val;
 
-	// ensure the values being pushed are read successfully
-	int in_read;
+	// ensure the values and instructions are read successfully
+	int val_read;
+	char input_instruction;
 
 	while(!stop_execution)
 	{
 		// read the input instruction (a single character)
-		char input_instruction = 0;
-		in_read = scanf("%c", &input_instruction);
+		input_instruction = 0;
+		scanf("%c", &input_instruction);
 
 		// the character could be a whitespace so we need to skip those
-		if( false == is_whitespace(input_instruction) || in_read != 1 )
+		if( false == is_whitespace(input_instruction))
 		{
 			switch(input_instruction){
 				case 'u':
-					in_read = scanf("%d", &val);
-					if(in_read != 1){
+					val_read = scanf("%d", &val);
+					if(val_read != 1){
 						printf("failed push\n");
+						while ((getchar()) != '\n'); // Clear the input buffer
 					}else{
 						if(push(stack, &stack_current_size, stack_max_size, val)){
 							printf("%d\n", val);
@@ -265,7 +267,7 @@ int main( int argc, char **argv )
 					stop_execution = true;
 					break;
 				default:
-					printf("invalid instruction %c", input_instruction);
+					printf("invalid instruction %c\n", input_instruction);
 					break;
 			}
 		}

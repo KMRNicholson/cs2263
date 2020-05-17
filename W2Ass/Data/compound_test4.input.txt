@@ -1,0 +1,58 @@
+e
+e
+o
+u 5
+e
+o
+u 10000
+u someinput
+u a
+u b
+u u
+uu
+u10
+e
+C
+S
+2
+2
+6
+3
+W
+i
+t
+h
+R
+i
+c
+k
+W
+i
+g
+h
+t
+m
+a
+n
+u 11100
+u 10010
+u 201
+u -10
+e
+o
+e
+x
+u 10
+u 15
+u 20
+u 25
+u 30
+o
+o
+u 1
+u 2
+u 3
+e
+o
+e
+x

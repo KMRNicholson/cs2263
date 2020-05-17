@@ -89,7 +89,7 @@ pop_test3: Stack
 
 ##############################
 # compound test cases
-compound_test: compound_test1 compound_test2 compound_test3
+compound_test: compound_test1 compound_test2 compound_test3 compound_test4
 
 compound_test1: Stack
 	./Stack < Data/compound_test1.input > compound_test1.result
@@ -103,3 +103,6 @@ compound_test3: Stack
 	./Stack < Data/compound_test3.input > compound_test3.result
 	./TestPassed.sh compound_test3.result Data/compound_test3.expected
 
+compound_test4: Stack
+	./Stack < Data/compound_test4.input > compound_test4.result
+	./TestPassed.sh compound_test4.result Data/compound_test4.expected
