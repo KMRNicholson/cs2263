@@ -79,7 +79,7 @@ int main(int argc, char *argv[]){
             address = my_strchr(lines[i], 'a');
             if(address != NULL){
                 index = address - bp;
-                printf("Character 'a' found at address %d in the line.", index);
+                printf("Character 'a' found at position %d in line %d.\n", index, i+1);
             }
         }
     }
