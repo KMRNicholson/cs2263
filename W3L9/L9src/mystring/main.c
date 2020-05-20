@@ -75,7 +75,7 @@ int main(int argc, char *argv[]){
     char* index;
     if (strcmp(argv[1], "my_strchr") == 0) {
         for (i = 0; i < num_lines; i++) {
-            bp = lines[i][0];
+            bp = lines[i];
             address = my_strchr(lines[i], 'a');
             if(address != NULL){
                 index = address - bp;
