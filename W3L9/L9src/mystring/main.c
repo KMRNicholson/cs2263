@@ -71,8 +71,8 @@ int main(int argc, char *argv[]){
     }
 
     char* address;
-    int* bp;
-    int* index;
+    char* bp;
+    char* index;
     if (strcmp(argv[1], "my_strchr") == 0) {
         for (i = 0; i < num_lines; i++) {
             bp = lines[i][0];
@@ -83,7 +83,7 @@ int main(int argc, char *argv[]){
             }
         }
     }
-    
+
     for (i = 0; i < num_lines; i++)
         free(lines[i]);
     free(lines);
