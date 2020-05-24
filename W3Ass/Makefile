@@ -45,7 +45,7 @@ test: compound_test remove_comment_test
 
 ##############################
 # compound test cases
-compound_test: Sample_test compound_test2 compound_test3 compound_test4
+compound_test: Sample_test HelloWorld_test hello_test
 
 Sample_test: htags
 	./htags < Data/Sample.html > Sample_test.result
