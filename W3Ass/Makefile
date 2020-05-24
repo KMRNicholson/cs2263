@@ -15,18 +15,19 @@ C_FLAGS = -Wall
 # prepend the command with '@' so that Make does not print the command before running it 
 help:
 	@printf "available command:\n"
-	@printf "	make help                (this command)\n"
-	@printf "	make htags               (to build your C program)\n"
-	@printf "	make test                (to run every test case)\n"
-	@printf "	make compound_test       (to run htags compound tests)\n"
-	@printf "	make remove_comment_test (to run test cases against the function to remove_comments)\n"
+	@printf "	make help                   (this command)\n"
+	@printf "	make htags                  (to build your C program)\n"
+	@printf "	make remove_comments_test   (to build the test C program)\n"
+	@printf "	make test                   (to run every test case)\n"
+	@printf "	make compound_test          (to run htags compound tests)\n"
+	@printf "	make remove_comment_test    (to run test cases against the function to remove_comments)\n"
 	
 # link our .o files to make an executable
 htags: htags.o parser.o
 	$(COMPILER) $(C_FLAGS) -o htags htags.o parser.o
 
 remove_comments_test: remove_comments_test.o parser.o
-	$(COMPILER) $(C_FLAGS) -c remove_comments_test remove_comments_test.o parser.o
+	$(COMPILER) $(C_FLAGS) -o remove_comments_test remove_comments_test.o parser.o
 
 # compile the .o files
 htags.o: htags.c
