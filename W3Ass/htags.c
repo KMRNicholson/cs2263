@@ -33,8 +33,8 @@ int main(int argc, char** argv){
 	}
 
     // Parallel integer table for the amount of occurences of each html tag in the index table
-    char* occurences = (char*)malloc(100);
-    if(occurences == (char*)NULL){
+    int* occurences = (int*)malloc(100);
+    if(occurences == (int*)NULL){
 		fprintf(stderr,"Memory failure, terminating");
 		return EXIT_FAILURE;
 	}
