@@ -1,8 +1,8 @@
 /* 
-    htags.c
+    remove_comments_test.c
 
     Description:
-    Program that counts the occurence of html tags from std input.
+    Test program for removing comments from html input.
     
     Author: 
     Kohdy Nicholson
@@ -20,20 +20,8 @@ int main(int argc, char** argv){
     // Only allowable data structure for holding a string
     char contents[100000];
 
-    // Table of character pointers to the first occurence of html tags
-    char* index_table[100];
-
-    // Parallel integer table for the amount of occurences of each html tag in the index table
-    int occurences[100];
-
     // base pointers for the html contents, index table and occurences table.
     char* contents_base_ptr = contents;
-    int* occurence_base_ptr = occurences;
-    char** index_base_ptr = index_table;
-
-    // Stack pointers for the occurence and index tables
-    int* occurrence_stack_ptr = occurences;
-    char** index_stack_ptr = index_table; 
 
     // Stack pointer to be used by the program for stack sizes
     char* stack_size;
@@ -73,45 +61,13 @@ int main(int argc, char** argv){
 
     /*
 
-    *** STEP THREE: FIND FIRST OCCURENCE OF HTML TAGS ***
-
+    *** STEP THREE: DISPLAY HTML WITH EMPTY COMMENTS ***  
+    
     */
     contents_base_ptr = contents;
     while(contents_base_ptr < stack_size){
-        if(*contents_base_ptr == '<'){
-            if(is_letter(*(contents_base_ptr+1)) == 1){
-
-                /*
-
-                *** STEP FOUR: FIND OTHER OCCURENCES OF HTML TAG. REMOVE TAGS ONCE CONFIRMED.
-
-                */
-                *index_stack_ptr = contents_base_ptr + 1;
-                *occurrence_stack_ptr = find_occurrences(contents, *index_stack_ptr);
-                occurrence_stack_ptr++;
-                index_stack_ptr++;
-            }
-        }
+        printf("%c", *contents_base_ptr);
         contents_base_ptr++;
-    }
-
-    /*
-
-    *** STEP FIVE: PRINT DETAILS FOR HTML TAGS ***
-
-    */
-    char* char_ptr;
-    while(index_base_ptr != index_stack_ptr){
-        char_ptr = *index_base_ptr;
-        while(is_letter(*char_ptr) == 1 || is_num(*char_ptr) == 1){
-            printf("%c", *char_ptr);
-            char_ptr++;
-        }
-
-        printf("\t\t%d\n", *occurence_base_ptr);
-
-        index_base_ptr++;
-        occurence_base_ptr++;
     }
 
     return EXIT_SUCCESS;
