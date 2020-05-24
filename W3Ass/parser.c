@@ -128,15 +128,3 @@ void remove_comment(char* start){
         ending_arrow++;
     }
 }
-
-/*
-Function to print out the name and occurences of the tag
-*/
-void print_tag_details(char* tag, int* occured){
-    while(is_letter(*tag) == 1){
-        printf("%c", *tag);
-        tag++;
-    }
-
-    printf("\t\t%d\n", *occured);
-}

@@ -18,7 +18,12 @@
 
 int main(int argc, char** argv){
     // Only allowable data structure for holding a string
-    char contents[100000];
+    int n = 100000;
+    char* contents = (char*)malloc(n);
+    if(contents == (char*)NULL){
+		fprintf(stderr,"Memory failure, terminating");
+		return EXIT_FAILURE;
+	}
 
     // Table of character pointers to the first occurence of html tags
     char* index_table[100];
@@ -113,6 +118,8 @@ int main(int argc, char** argv){
         index_base_ptr++;
         occurence_base_ptr++;
     }
+    
+    free(contents);
 
     return EXIT_SUCCESS;
 }
