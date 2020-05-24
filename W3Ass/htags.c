@@ -26,15 +26,18 @@ int main(int argc, char** argv){
 	}
 
     // Table of character pointers to the first occurence of html tags
-    //char* index_table[100];
-    char** index_table = (char**)malloc(n);
+    char** index_table = (char**)malloc(100);
     if(index_table == (char**)NULL){
 		fprintf(stderr,"Memory failure, terminating");
 		return EXIT_FAILURE;
 	}
 
     // Parallel integer table for the amount of occurences of each html tag in the index table
-    int occurences[100];
+    char* occurences = (char*)malloc(100);
+    if(occurences == (char*)NULL){
+		fprintf(stderr,"Memory failure, terminating");
+		return EXIT_FAILURE;
+	}
 
     // base pointers for the html contents, index table and occurences table.
     char* contents_base_ptr = contents;
