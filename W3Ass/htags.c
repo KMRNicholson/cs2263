@@ -16,6 +16,11 @@
 #include <time.h>
 
 int main(int argc, char** argv){
-    printf("argc: %d\n", argc);
+    char* tag;
+
+    while(scanf("%s", &tag) != EOF){
+        printf("%s", tag);
+    }
+
     return EXIT_SUCCESS;
 }
