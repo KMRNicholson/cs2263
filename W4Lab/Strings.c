@@ -33,7 +33,7 @@ char* duplicateString(char* s){
 // return 1 on failure
 int fputString(FILE* pFOut, char* s){
     int stringLength = strlen(s);
-    int write = fprintf(pFOut, "%d%s\n", stringLength, s);
+    int write = fprintf(pFOut, "%d%s", stringLength, s);
 
     if(write < 0){
         return EXIT_FAILURE;
