@@ -30,15 +30,17 @@ int main(int argc, char** argv){
     eof = ftell(file); // Get the file position at the end of the file.
     rewind(file); // reset file position to beginning.
     
-    while(ftell(file) != eof){
-        stdString = fgetString(file);
-        if(stdString == (char*)NULL){
-            printf("Failed to allocate memory. Exiting...\n");
-            return EXIT_FAILURE;
-        }
-        printf("%s\n", stdString);
-        freeString(stdString);
-    }
+    printf("EOF: %d\n", eof);
+
+    //while(ftell(file) != eof){
+    //    stdString = fgetString(file);
+    //    if(stdString == (char*)NULL){
+    //        printf("Failed to allocate memory. Exiting...\n");
+    //        return EXIT_FAILURE;
+    //    }
+    //    printf("%s\n", stdString);
+    //    freeString(stdString);
+    //}
     
     fclose(file);
 
