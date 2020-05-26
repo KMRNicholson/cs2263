@@ -16,7 +16,7 @@ C_FLAGS = -Wall
 help:
 	@printf "available command:\n"
 	@printf "	make help                   (this command)\n"
-	@printf "   make all                    (builds test drivers, runs tests)\n"
+	@printf "	make all                    (build drivers and tests them)\n"
 	@printf "	make fputString             (to build driver test program for fputString)\n"
 	@printf "	make fgetString             (to build driver test program for fgetString)\n"
 	@printf "	make fputString_test        (test fputString)\n"
