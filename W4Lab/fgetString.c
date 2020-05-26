@@ -17,8 +17,6 @@
 #include <string.h>
 
 int main(int argc, char** argv){
-    int n = 100;
-    int i = 0;
     int eof;
     char* stdString;
     

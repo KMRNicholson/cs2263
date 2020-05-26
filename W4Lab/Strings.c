@@ -20,7 +20,6 @@ void freeString(char* s){
 // return (char*)NULL on failure
 // should call mallocString(), and then strcpy()
 char* duplicateString(char* s){
-    int copySize;
     int stringSize = strlen(s) + 1;
     char* sptr = mallocString(stringSize);
     if(sptr != (char*)NULL){
