@@ -53,7 +53,7 @@ char* fgetString(FILE* pFIn){
 
     string = mallocString(stringLength); // Allocate memory
     if(string != (char*)NULL){
-        fgets(string, stringLength, pFIn); // Get the rest of the line
+        fgets(string, stringLength+1, pFIn); // Get the rest of the line
     }
 
     return string;

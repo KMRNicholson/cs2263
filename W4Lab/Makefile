@@ -55,5 +55,5 @@ fputString_test: fputString
 
 fgetString_test: fgetString
 	./fgetString fputString.result > fgetString.result
-	./TestPassed.sh fgetString.result Data/fputString.expected
+	./TestPassed.sh fgetString.result Data/fgetString.expected
 
