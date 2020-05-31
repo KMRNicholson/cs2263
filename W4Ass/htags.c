@@ -112,7 +112,7 @@ int main(int argc, char** argv){
                     list_size++;
                 }else{
                     occurences[index]++;
-                    free(tag); // We do not need this tag as there is an identical copy in the tag list.
+                    free(tag);
                 }
             }
         }

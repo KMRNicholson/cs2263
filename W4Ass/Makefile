@@ -49,15 +49,15 @@ test: compound_test remove_comment_test
 compound_test: Sample_test HelloWorld_test hello_test
 
 Sample_test: htags
-	./htags < Data/Sample.html > Sample_test.result
+	./htags ./Data/Sample.html > Sample_test.result
 	./TestPassed.sh Sample_test.result Data/Sample_test.expected
 
 HelloWorld_test: htags
-	./htags < Data/HelloWorld.html > HelloWorld_test.result
+	./htags ./Data/HelloWorld.html > HelloWorld_test.result
 	./TestPassed.sh HelloWorld_test.result Data/HelloWorld_test.expected
 
 hello_test: htags
-	./htags < Data/hello.html > hello_test.result
+	./htags ./Data/hello.html > hello_test.result
 	./TestPassed.sh hello_test.result Data/hello_test.expected
 
 
