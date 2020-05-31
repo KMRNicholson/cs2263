@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang = "en"> <!--                                       -->
+	<head>
+  		<meta charset="utf-8">
+		<title>Hello (Suessian) world!</title>
+	</head>
+	<body>
+	<strong>Hello!</strong>
+	<ol> <!--                                   -->
+		<li> fish </li>
+		<li> <blink>fish</blink> </li>
+	</ol>
+	<p style="color:red"> fish </p> <!--                -->
+	<p style="color:blue"> fish </p>
+	</body>
+</html>
