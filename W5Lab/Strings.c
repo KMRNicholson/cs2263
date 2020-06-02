@@ -82,11 +82,13 @@ String fgetString(FILE* pFIn){
 String getString(String input, int n){
     fgets(input, n-1, stdin);
     return input;
-};
+}
 
 // Takes two null pointers to two strings and compares them.
 // usable in the qsort() function
 // returns 0 if identical
 int stringCompare(void* str1, void* str2){
-    return strcmp((String)str1, (String)str2);
+    const String* ptr1 = (String*)str1;
+    const String* ptr2 = (String*)str2;
+    return strcmp(*ptr1, *ptr2);
 }

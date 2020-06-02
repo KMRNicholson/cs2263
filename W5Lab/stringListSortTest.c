@@ -18,7 +18,6 @@
 
 int main(int argc, char** argv){
     int i = 0;
-    int max = 0;
     String* dupList;
 
     dupList = duplicateStringList(argv, argc-1);
@@ -27,12 +26,7 @@ int main(int argc, char** argv){
         return EXIT_FAILURE;
     }
 
-    while(i<argc-1){
-        if(strlen(dupList[i]) > max) max = strlen(dupList[i]);
-        i++;
-    }
-
-    qsort(dupList, argc-1, sizeof(String)*max, stringCompare);
+    qsort(dupList, argc-1, sizeof(String), stringCompare);
 
     i = 0;
     while(i < argc-1){
