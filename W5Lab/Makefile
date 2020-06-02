@@ -59,11 +59,11 @@ Strings.o: Strings.c
 valgrind: valgrind1 valgrind2 valgrind3
 
 valgrind1: stringTest1
-	$(VAL) stringTest1 $(VAL_OPTIONS)vg_stringTest1_log.txt
+	$(VAL) ./stringTest1 $(VAL_OPTIONS)vg_stringTest1_log.txt
 
 valgrind2: stringListTest
-	$(VAL) stringListTest $(VAL_OPTIONS)vg_stringListTest_log.txt
+	$(VAL) ./stringListTest $(VAL_OPTIONS)vg_stringListTest_log.txt
 
 valgrind3: stringListSortTest
-	$(VAL) stringListSortTest $(VAL_OPTIONS)vg_stringListSortTest_log.txt
+	$(VAL) ./stringListSortTest $(VAL_OPTIONS)vg_stringListSortTest_log.txt
 
