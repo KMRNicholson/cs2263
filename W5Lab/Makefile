@@ -64,6 +64,6 @@ valgrind1: stringTest1
 valgrind2: stringListTest
 	$(VAL) stringListTest $(VAL_OPTIONS)vg_stringListTest_log.txt
 
-valgrind1: stringListSortTest
+valgrind3: stringListSortTest
 	$(VAL) stringListSortTest $(VAL_OPTIONS)vg_stringListSortTest_log.txt
 
