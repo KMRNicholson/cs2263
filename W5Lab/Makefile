@@ -62,7 +62,7 @@ valgrind1: stringTest1
 	$(VAL) ./stringTest1 $(VAL_OPTIONS)vg_stringTest1_log.txt
 
 valgrind2: stringListTest
-	$(VAL) ./stringListTest $(VAL_OPTIONS)vg_stringListTest_log.txt
+	$(VAL) ./stringListTest One Two Three Arguments $(VAL_OPTIONS)vg_stringListTest_log.txt
 
 valgrind3: stringListSortTest
 	$(VAL) ./stringListSortTest $(VAL_OPTIONS)vg_stringListSortTest_log.txt
