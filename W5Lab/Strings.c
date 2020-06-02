@@ -26,7 +26,7 @@ String duplicateString(String s){
     String sptr = mallocString(stringSize);
     if(sptr != (String)NULL){
         sptr = strncpy(sptr, s, stringSize-1);
-	sptr[stringSize-1] = '\0';
+	    sptr[stringSize-1] = '\0';
     }
     return sptr;
 }
