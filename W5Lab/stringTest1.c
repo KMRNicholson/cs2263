@@ -27,5 +27,7 @@ int main(int argc, char** argv){
 
     printf("%s", dupString);
 
+    freeString(dupString);
+
     return EXIT_SUCCESS;
 }
