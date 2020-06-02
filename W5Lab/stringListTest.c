@@ -20,13 +20,13 @@ int main(int argc, char** argv){
     int i = 0;
     String* dupList;
 
-    dupList = duplicateStringList(argv, argc);
+    dupList = duplicateStringList(argv, argc-1);
     if(dupList == (String*)NULL){
         printf("Failed to allocate memory. Exiting...");
         return EXIT_FAILURE;
     }
 
-    while(i < argc){
+    while(i < argc-1){
         printf("%s", dupList[i]);
         freeString(dupList[i]);
         i++;

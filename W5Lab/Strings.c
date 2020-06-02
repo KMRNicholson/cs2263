@@ -22,10 +22,11 @@ void freeString(String s){
 // return (String)NULL on failure
 // should call mallocString(), and then strcpy()
 String duplicateString(String s){
-    int stringSize = strlen(s) + 1;
+    int stringSize = strlen(s)+1;
     String sptr = mallocString(stringSize);
     if(sptr != (String)NULL){
-        sptr = strncpy(sptr, s, stringSize);
+        sptr = strncpy(sptr, s, stringSize-1);
+	sptr[stringSize-1] = '\0';
     }
     return sptr;
 }
@@ -35,10 +36,10 @@ String duplicateString(String s){
 // return (String)NULL on failure
 String* duplicateStringList(String* s, int listSize){
     int i = 0;
-    String* dupList = (String*)malloc(listSize);
+    String* dupList = (String*)malloc(listSize*sizeof(String));
     if(dupList != (String*)NULL){
         while(i < listSize){
-            dupList[i] = duplicateString(s[i]);
+            dupList[i] = duplicateString(s[i+1]);
             i++;
         }
     }
