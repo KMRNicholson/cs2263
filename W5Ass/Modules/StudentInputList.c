@@ -11,6 +11,8 @@
     2020-06-03
 */
 
+#include <stdio.h>
+#include <stdlib.h>
 #include "../Headers/Point2D.h"
 #include "../Headers/Strings.h"
 #include "../Headers/Line.h"
@@ -31,7 +33,7 @@ pStudentInputList createStudentInputList(){
     pPoint2D address = (pPoint2D)NULL;
     String name = (String)NULL;
     char input[255];
-    int x, y;
+    double x, y;
     int i = 0;
 
     if(studentList != (pStudentInputList)NULL){
