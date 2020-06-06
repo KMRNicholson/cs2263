@@ -42,6 +42,6 @@ String getString(String input);
 // Takes two null pointers to two strings and compares them.
 // usable in the qsort() function
 // returns 0 if identical
-int stringCompare(void* str1, void* str2);
+int stringCompare(const void* str1, const void* str2);
 
 #endif
