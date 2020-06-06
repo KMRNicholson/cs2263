@@ -30,7 +30,6 @@ pLine* mallocLineList(int length){
 }
 
 void freeLine(pLine line){
-    int i = 0;
     if(line->stops != (pPoint2D*)NULL){
         freePoint2DList(line->stops, line->length);
     }
@@ -69,7 +68,7 @@ pLine createLine(int length, String name, pPoint2D* stops){
 pLine fgetLine(FILE* file){
     int i, stops;
     fscanf(file, "%d ", &stops);
-    pLine line;
+    pLine line = (pline)NULL;
 
     pPoint2D* points = mallocPoint2DList(stops);
 
