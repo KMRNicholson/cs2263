@@ -25,17 +25,7 @@ help:
 	@printf "	make routeplan              (builds the main program)\n"
 	@printf "	make routeplan              (builds the main program)\n"
 	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make test                   (builds all tests)\n"
-	@printf "	make compound_test          (to run htags compound tests)\n"
-	@printf "	make remove_comment_test    (to run test cases against the function to remove_comments)\n"
+	@printf "	make valgrind_loadRoutes    (run memory leak tests)\n"
 	
 # link our .o files to make an executable
 loadRoutesTest: loadRoutesTest.o modules.o
@@ -46,3 +36,6 @@ loadRoutesTest.o: loadRoutesTest.c
 
 modules.o:
 	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
+
+valgrind_loadRoutes: loadRoutesTest
+	$(VAL) ./loadRoutesTest A5Data/busroutes.txt $(VAL_OPTIONS)
