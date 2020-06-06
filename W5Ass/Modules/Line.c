@@ -44,7 +44,7 @@ void freeLine(pLine line){
 void freeLineList(pLine* lines, int length){
     int i = 0;
     while(i < length){
-        free(lines[i]);
+        freeLine(lines[i]);
         i++;
     }
 }
