@@ -44,5 +44,5 @@ loadRoutesTest: loadRoutesTest.o modules.o
 loadRoutesTest.o: loadRoutesTest.c
 	$(COMPILER) $(C_FLAGS) -c loadRoutesTest.c
 
-modules.o: modules.c
+modules.o:
 	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
