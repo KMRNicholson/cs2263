@@ -25,7 +25,7 @@ help:
 	@printf "	make loadRoutesTest         (builds the driver to test the loading of bus routes)\n"
 	@printf "	make loadStudentsTest       (builds the driver to test the loading of students)\n"
 	@printf "	make modules                (builds the modules that used)\n"
-	@printf "	make routeplan              (builds the main program)\n"
+	@printf "	make clean                  (cleans object files in the current folder)\n"
 	@printf "	make routeplan              (builds the main program)\n"
 	@printf "	make routeplan              (builds the main program)\n"
 	@printf "	make routeplan              (builds the main program)\n"
@@ -33,10 +33,10 @@ help:
 	@printf "	make valgrind_loadStudents  (run memory leak tests for loading students)\n"
 	
 # link our .o files to make an executable
-loadRoutesTest: loadRoutesTest.o modules.o
+loadRoutesTest: clean loadRoutesTest.o modules.o
 	$(COMPILER) $(C_FLAGS) -o loadRoutesTest *.o
 
-loadStudentsTest: loadStudentsTest.o modules.o
+loadStudentsTest: clean loadStudentsTest.o modules.o
 	$(COMPILER) $(C_FLAGS) -o loadStudentsTest *.o
 
 loadRoutesTest.o: loadRoutesTest.c
@@ -48,7 +48,8 @@ loadStudentsTest.o: loadStudentsTest.c
 modules.o:
 	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
 
-
+clean:
+	rm *.o
 
 ######################################
 # VALGRINDING
