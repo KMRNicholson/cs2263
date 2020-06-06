@@ -38,7 +38,7 @@ pStudentInputList createStudentInputList(){
 
     if(studentList != (pStudentInputList)NULL){
         studentList->students = mallocStudentList();
-        while(scanf("%lf %lf %[^\n]", &x, &y, &input) != EOF){
+        while(scanf("%lf %lf %[^\n]", &x, &y, input) != EOF){
             studentList->students = (pStudent*)realloc(studentList->students, (i+1)*sizeof(pStudent));
             name = duplicateString(input);
             address = createPoint2D(x, y);
