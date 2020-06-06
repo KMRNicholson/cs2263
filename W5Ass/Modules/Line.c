@@ -47,6 +47,7 @@ void freeLineList(pLine* lines, int length){
         freeLine(lines[i]);
         i++;
     }
+    free(lines);
 }
 
 void setLine(pLine line, int length, String name, pPoint2D* stops){
