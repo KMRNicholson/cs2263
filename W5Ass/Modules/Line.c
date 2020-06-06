@@ -68,7 +68,7 @@ pLine createLine(int length, String name, pPoint2D* stops){
 pLine fgetLine(FILE* file){
     int i, stops;
     fscanf(file, "%d ", &stops);
-    pLine line = (pline)NULL;
+    pLine line = (pLine)NULL;
 
     pPoint2D* points = mallocPoint2DList(stops);
 
