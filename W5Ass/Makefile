@@ -12,6 +12,10 @@ COMPILER = gcc
 # The C flags to pass to gcc
 C_FLAGS = -g -Wall -lm
 
+# valgring tool
+VAL = valgrind 
+VAL_OPTIONS = --tool=memcheck --leak-check=full --verbose --log-file=
+
 # prepend the command with '@' so that Make does not print the command before running it 
 help:
 	@printf "available command:\n"
