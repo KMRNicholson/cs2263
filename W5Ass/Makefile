@@ -49,7 +49,7 @@ modules.o:
 	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
 
 clean:
-	rm *.o
+	rm -f *.o
 
 ######################################
 # VALGRINDING
