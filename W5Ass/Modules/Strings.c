@@ -63,7 +63,7 @@ int fputString(FILE* pFOut, String s){
 // return pointer to the allocated string in the heap
 // return (String)NULL on failure
 String fgetString(FILE* pFIn){
-    char fileInput[100];
+    char fileInput[255];
     String string;
     fscanf(pFIn, "%[^\n]", fileInput);
     string = duplicateString(fileInput);
@@ -72,9 +72,12 @@ String fgetString(FILE* pFIn){
 
 // reads a string from stdin
 // return pointer to the allocated string
-String getString(String input, int n){
-    fgets(input, n-1, stdin);
-    return input;
+String getString(){
+    char input[255];
+    String string;
+    scanf("%[^\n]", input);
+    string = duplicateString(input);
+    return string;
 }
 
 // Takes two null pointers to two strings and compares them.

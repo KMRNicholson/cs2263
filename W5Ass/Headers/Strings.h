@@ -37,7 +37,7 @@ String fgetString(FILE* pFIn);
 
 // reads a string from stdin
 // return pointer to the allocated string
-String getString(String input, int n);
+String getString();
 
 // Takes two null pointers to two strings and compares them.
 // usable in the qsort() function

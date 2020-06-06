@@ -29,17 +29,32 @@ help:
 	@printf "	make routeplan              (builds the main program)\n"
 	@printf "	make routeplan              (builds the main program)\n"
 	@printf "	make routeplan              (builds the main program)\n"
-	@printf "	make valgrind_loadRoutes    (run memory leak tests)\n"
+	@printf "	make valgrind_loadRoutes    (run memory leak tests for loading routes)\n"
+	@printf "	make valgrind_loadStudents  (run memory leak tests for loading students)\n"
 	
 # link our .o files to make an executable
 loadRoutesTest: loadRoutesTest.o modules.o
 	$(COMPILER) $(C_FLAGS) -o loadRoutesTest *.o
 
+loadStudentsTest: loadStudentsTest.o modules.o
+	$(COMPILER) $(C_FLAGS) -o loadStudentsTest *.o
+
 loadRoutesTest.o: loadRoutesTest.c
 	$(COMPILER) $(C_FLAGS) -c loadRoutesTest.c
+
+loadStudentsTest.o: loadStudentsTest.c
+	$(COMPILER) $(C_FLAGS) -c loadStudentsTest.c
 
 modules.o:
 	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
 
+
+
+######################################
+# VALGRINDING
+
 valgrind_loadRoutes: loadRoutesTest
 	$(VAL) ./loadRoutesTest A5Data/busroutes.txt $(VAL_OPTIONS)
+
+valgrind_loadStudents: loadStudentsTest
+	$(VAL) cat A5Data/students.txt | ./loadStudentsTest $(VAL_OPTIONS)

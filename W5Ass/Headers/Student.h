@@ -27,8 +27,10 @@ typedef struct student{
 
 // Functions for creating a student struct
 pStudent mallocStudent();
+pStudent* mallocStudentList();
 void setStudent(pStudent student, String name, pPoint2D address);
 void freeStudent(pStudent pThis);
+void freeStudentList(pStudent* students, int length);
 pStudent createStudent(String name, pPoint2D address);
 
 // Functions for getting/setting student data

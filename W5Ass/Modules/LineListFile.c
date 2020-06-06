@@ -25,7 +25,7 @@ pLineListFile mallocLineListFile(){
 }
 
 void freeLineListFile(pLineListFile lineList){
-    freeLineList(lineList->lines, lineList->length);
+    if(lineList->lines != (pLine*)NULL) freeLineList(lineList->lines, lineList->length);
     free(lineList);
 }
 

@@ -34,6 +34,7 @@ pPoint2D createPoint2D(double x, double y);
 pPoint2D duplicatePoint2D(pPoint2D point);
 double getDistancePoint2D(pPoint2D pt1, pPoint2D pt2);
 pPoint2D fgetPoint2D(FILE* file);
+pPoint2D getPoint2D();
 
 void point2DToString(pPoint2D point);
 

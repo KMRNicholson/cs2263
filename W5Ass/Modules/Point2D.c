@@ -79,6 +79,17 @@ pPoint2D fgetPoint2D(FILE* file){
     return point;
 }
 
+pPoint2D getPoint2D(){
+    double x, y;
+    pPoint2D point;
+
+    scanf("%lf %lf ", &x, &y);
+
+    point = createPoint2D(x, y);
+
+    return point;
+}
+
 void point2DToString(pPoint2D point){
     printf("\nx\ttype: double\tval: %lf\n", point->x);
     printf("y\ttype: double\tval: %lf", point->y);

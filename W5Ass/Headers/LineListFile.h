@@ -13,8 +13,8 @@
     2020-06-06
 */
 
-#ifndef LINELIST_H
-#define LINELIST_H
+#ifndef LINELISTFILE_H
+#define LINELISTFILE_H
 
 #include <stdio.h>
 #include "Point2D.h"
@@ -27,7 +27,7 @@ typedef struct lineListFile{
     pLine* lines;
 } LineListFile, *pLineListFile;
 
-void freeLineListFile(pLineListFile LineList);
+void freeLineListFile(pLineListFile lineList);
 pLineListFile createLineListFile(FILE* file);
 void lineListFileToString(pLineListFile lineList);
 
