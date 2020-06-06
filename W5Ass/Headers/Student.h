@@ -16,6 +16,7 @@
 
 #include "Point2D.h"
 #include "Strings.h"
+#include "Line.h"
 
 // Struct typedef
 typedef struct student{
