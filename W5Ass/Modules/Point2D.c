@@ -69,10 +69,10 @@ double getDistancePoint2D(pPoint2D pt1, pPoint2D pt2){
 }
 
 pPoint2D fgetPoint2D(FILE* file){
-    int x, y;
+    double x, y;
     pPoint2D point;
 
-    fscanf(file, "%d %d ", &x, &y);
+    fscanf(file, "%lf %lf ", &x, &y);
 
     point = createPoint2D(x, y);
 

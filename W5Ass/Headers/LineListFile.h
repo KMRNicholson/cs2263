@@ -2,8 +2,9 @@
     LineList.h
 
     Description:
-    Header file which contains function signatures for a LineList struct.
-    A LineList struct is essentially an array of Line pointers, with a length.
+    Header file which contains function signatures for a LineListFile struct.
+    A LineListFile struct is essentially a c struct representation of data found
+    in the busroutes.txt files provided to the program.
 
     Author: 
     Kohdy Nicholson

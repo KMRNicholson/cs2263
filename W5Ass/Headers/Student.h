@@ -21,6 +21,7 @@
 typedef struct student{
     String name;
     pPoint2D address;
+    pLine line;
 } Student, *pStudent;
 
 // Functions for creating a student struct

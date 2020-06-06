@@ -17,7 +17,7 @@
 #include "../Headers/Point2D.h"
 #include "../Headers/Strings.h"
 #include "../Headers/Line.h"
-#include "../Headers/LineList.h"
+#include "../Headers/LineListFile.h"
 
 // Functions for creating a LineList struct
 pLineListFile mallocLineListFile(){
