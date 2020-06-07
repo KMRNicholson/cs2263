@@ -27,8 +27,11 @@ typedef struct lineListFile{
     pLine* lines;
 } LineListFile, *pLineListFile;
 
+// Function that free's a lineListFile struct
 void freeLineListFile(pLineListFile lineList);
+// Function which creates a lineListFile struct based on the given busroutes file
 pLineListFile createLineListFile(FILE* file);
+// Function which displayes the inner values of the lineListFile struct
 void lineListFileToString(pLineListFile lineList);
 
 #endif

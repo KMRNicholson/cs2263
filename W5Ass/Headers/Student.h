@@ -26,14 +26,21 @@ typedef struct student{
     pLine line;
 } Student, *pStudent;
 
-// Functions for creating a student struct
+// Function that mallocs a single student
 pStudent mallocStudent();
+// Function that mallocs an array of students of size 1. Must be realloced to increase the size.
 pStudent* mallocStudentList();
+// Function that free's the student
 void freeStudent(pStudent pThis);
+// Function that free's the student list
 void freeStudentList(pStudent* students, int length);
+// Function that creates a student
 pStudent createStudent(String name, pPoint2D address);
+// prints the student values to the console
 void studentToString(pStudent student);
+// finds the closest stop to the student based on the line which they are assigned to
 int findClosestStop(pStudent student);
+// finds the line which has the closest stop to the student, and assigns that line to the student
 void assignLineToStudent(pStudent student, pLineListFile lineList);
 
 #endif

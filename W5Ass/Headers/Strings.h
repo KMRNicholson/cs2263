@@ -1,49 +1,39 @@
+/* 
+    Strings.h
+
+    Description:
+    Header file which contains function signatures for a char*.
+
+    Author: 
+    Kohdy Nicholson
+    
+    Date: 
+    2020-06-03
+*/
+
 #include <stdio.h>
 
 #ifndef STRINGS_H
 #define STRINGS_H
 
+// Typedef
 typedef char* String;
 
-// a cover function for malloc()
-// malloc and return memory for a string of stringsize characters
-// return (char*)NULL on failure
+// mallocs a string
 String mallocString(int stringsize);
-
-// just a cover function for free()
+// free's a string
 void freeString(String s);
-
-// create a duplicate string of s
-// return it
-// return (char*)NULL on failure
-// should call mallocString(), and then strcpy()
+// deep copies a string
 String duplicateString(String s);
-
-// create a duplicate list of strings
-// return it
-// return (char*)NULL on failure
-// should call mallocString(), and then strcpy()
-String* duplicateStringList(String* s, int listSize);
-
-// writes a string to a file, preceded by it's length
-// return 0 on success
-// return 1 on failure
+// writes a string to a file
 int fputString(FILE* pFOut, String s);
-
-// reads a string from file.
-// return pointer to the allocated string in the heap
-// return (char*)NULL on failure
+// reads a string from file
 String fgetString(FILE* pFIn);
-
 // reads a string from stdin
-// return pointer to the allocated string
 String getString();
-
 // Takes two null pointers to two strings and compares them.
-// usable in the qsort() function
-// returns 0 if identical
 int stringCompare(const void* str1, const void* str2);
-
+// prints a string
 void stringToString(String string);
 
 #endif

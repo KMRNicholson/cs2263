@@ -1,5 +1,5 @@
 /* 
-    Line.h
+    Line.c
 
     Description:
     Code file which contains functions for a line struct.
@@ -18,44 +18,49 @@
 #include "../Headers/Strings.h"
 #include "../Headers/Line.h"
 
-// Functions for creating a Line struct
+// Function that mallocs a single line
 pLine mallocLine(){
-    pLine line = (pLine)malloc(sizeof(Line));
-    return line;
+    return (pLine)malloc(sizeof(Line));
 }
 
+// Function that mallocs a list of lines
 pLine* mallocLineList(int length){
-    pLine* lines = (pLine*)malloc(sizeof(pLine)*length);
-    return lines;
+    return (pLine*)malloc(sizeof(pLine)*length);
 }
 
+// Function that free's a single line
 void freeLine(pLine line){
-    if(line->stops != (pPoint2D*)NULL){
+    if(line->stops != (pPoint2D*)NULL){ // check to see if there are other members to free
         freePoint2DList(line->stops, line->length);
     }
 
-    if(line->name != (String)NULL){
+    if(line->name != (String)NULL){ // check to see if there are other members to free
         freeString(line->name);
     }
 
     free(line);
 }
 
+// Function that free's a list of lines
 void freeLineList(pLine* lines, int length){
     int i = 0;
-    while(i < length){
+    
+    while(i < length){ // For each line, we must free it from the list
         freeLine(lines[i]);
         i++;
     }
-    free(lines);
+    
+    free(lines); // free the list pointer
 }
 
+// Simply sets the properties of the line struct
 void setLine(pLine line, int length, String name, pPoint2D* stops){
     line->length = length;
     line->name = name;
     line->stops = stops;
 }
 
+// Function which creates a line, by calling a malloc and set functions above
 pLine createLine(int length, String name, pPoint2D* stops){
     pLine line = mallocLine();
     
@@ -66,6 +71,7 @@ pLine createLine(int length, String name, pPoint2D* stops){
     return line;
 }
 
+// Function which scans a bus line from a file.
 pLine fgetLine(FILE* file){
     int i, stops;
     fscanf(file, "%d ", &stops);
@@ -94,6 +100,7 @@ pLine fgetLine(FILE* file){
     return line;
 }
 
+// Function which deep copies a given line.
 pLine duplicateLine(pLine line){
     int i = 0;
     pLine dupLine = mallocLine();
@@ -118,6 +125,7 @@ pLine duplicateLine(pLine line){
     return dupLine;
 }
 
+// Function which prints the inner values of the line struct
 void lineToString(pLine line){
     int i = 0;
     printf("\nname\ttype: char*\tval: %s\nlength\ttype: int\tval: %d", line->name, line->length);

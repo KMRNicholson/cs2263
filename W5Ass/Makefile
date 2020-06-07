@@ -31,6 +31,8 @@ help:
 	@printf "	make valgrind_loadStudents  (run memory leak tests for loading students)\n"
 	
 # link our .o files to make an executable
+all: RoutePlanner loadRoutesTest loadStudentsTest valgrind clean
+
 RoutePlanner: clean RoutePlanner.o modules.o
 	$(COMPILER) $(C_FLAGS) -o RoutePlanner *.o
 
@@ -57,6 +59,8 @@ clean:
 
 ######################################
 # VALGRINDING
+
+valgrind: valgrind_RoutePlanner valgrind_loadRoutes valgrind_loadStudents
 
 valgrind_RoutePlanner: RoutePlanner
 	$(VAL) cat A5Data/students.txt | ./RoutePlanner A5Data/busroutes.txt $(VAL_OPTIONS)

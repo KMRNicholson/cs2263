@@ -25,9 +25,11 @@ typedef struct studentInputList{
     pStudent* students;
 } StudentInputList, *pStudentInputList;
 
-// Functions for creating a StudentInputList struct
+// Function for freeing a student input list
 void freeStudentInputList(pStudentInputList students);
+// Function that creates a student input list based on the input provided from stdin
 pStudentInputList createStudentInputList();
+// prints the student list values to the console
 void studentInputListToString(pStudentInputList StudentInputList);
 
 #endif

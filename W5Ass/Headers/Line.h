@@ -26,15 +26,21 @@ typedef struct line{
     pPoint2D* stops;
 } Line, *pLine;
 
-// Functions for creating a Line struct
+// Function that mallocs a single line
 pLine mallocLine();
+// Function that mallocs a list of lines
 pLine* mallocLineList(int length);
+// Function that free's a single line
 void freeLine(pLine line);
+// Function that free's a list of lines
 void freeLineList(pLine* lines, int length);
-void setLine(pLine line, int length, String name, pPoint2D* stops);
+// Function which creates a line, by calling a malloc and set functions above
 pLine createLine(int length, String name, pPoint2D* stops);
+// Function which scans a bus line from a file.
 pLine fgetLine(FILE* file);
+// Function which deep copies a given line.
 pLine duplicateLine(pLine line);
+// Function which prints the inner values of the line struct
 void lineToString(pLine line);
 
 #endif
