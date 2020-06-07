@@ -2,7 +2,7 @@
     StudentInputList.h
 
     Description:
-    Header file which contains function signatures for a StudentInputList struct.
+    Code file which contains function signatures for a StudentInputList struct.
 
     Author: 
     Kohdy Nicholson

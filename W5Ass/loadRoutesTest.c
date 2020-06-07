@@ -19,6 +19,7 @@ int main(int argc, char** argv){
     
     lineListFileToString(lineListFile);
     freeLineListFile(lineListFile);
+    printf("\n");
     
     return EXIT_SUCCESS;
 }

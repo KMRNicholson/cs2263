@@ -34,6 +34,7 @@ void freeLineList(pLine* lines, int length);
 void setLine(pLine line, int length, String name, pPoint2D* stops);
 pLine createLine(int length, String name, pPoint2D* stops);
 pLine fgetLine(FILE* file);
+pLine duplicateLine(pLine line);
 void lineToString(pLine line);
 
 #endif

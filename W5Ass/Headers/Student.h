@@ -17,6 +17,7 @@
 #include "Point2D.h"
 #include "Strings.h"
 #include "Line.h"
+#include "LineListFile.h"
 
 // Struct typedef
 typedef struct student{
@@ -26,17 +27,11 @@ typedef struct student{
 } Student, *pStudent;
 
 // Functions for creating a student struct
-pStudent mallocStudent();
-pStudent* mallocStudentList();
-void setStudent(pStudent student, String name, pPoint2D address);
 void freeStudent(pStudent pThis);
 void freeStudentList(pStudent* students, int length);
 pStudent createStudent(String name, pPoint2D address);
-
-// Functions for getting/setting student data
-String getStudentName(pStudent student);
-pPoint2D getStudentAddress(pStudent student);
-
 void studentToString(pStudent student);
+int findClosestStop(pStudent student);
+void assignLineToStudent(pStudent student, pLineListFile lineList);
 
 #endif

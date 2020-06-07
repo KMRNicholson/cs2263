@@ -94,6 +94,29 @@ pLine fgetLine(FILE* file){
     return line;
 }
 
+pLine duplicateLine(pLine line){
+    int i = 0;
+    pLine dupLine = mallocLine();
+    String name = duplicateString(line->name);
+    pPoint2D* stops = mallocPoint2DList(line->length);
+
+    while(i < line->length){
+        stops[i] = duplicatePoint2D(line->stops[i]);
+        if(stops[i] == (pPoint2D)NULL){
+            freePoint2DList(stops, line->length);
+            break;
+        }
+    }
+
+    if(name != (String)NULL && stops != (pPoint2D*)NULL && dupLine != (pLine)NULL){
+        dupLine->length = line->length;
+        dupLine->name = name;
+        dupLine->stops = stops;
+    }
+
+    return dupLine;
+}
+
 void lineToString(pLine line){
     int i = 0;
     printf("\nname\ttype: char*\tval: %s\nlength\ttype: int\tval: %d", line->name, line->length);

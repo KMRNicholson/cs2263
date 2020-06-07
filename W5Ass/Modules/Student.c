@@ -16,6 +16,8 @@
 #include "../Headers/Point2D.h"
 #include "../Headers/Strings.h"
 #include "../Headers/Student.h"
+#include "../Headers/Line.h"
+#include "../Headers/LineListFile.h"
 
 pStudent mallocStudent(){
     pStudent stud = (pStudent)malloc(sizeof(Student));
@@ -35,6 +37,7 @@ void setStudent(pStudent student, String name, pPoint2D address){
 void freeStudent(pStudent student){
     if(student->name != (String)NULL) freeString(student->name);
     if(student->address != (pPoint2D)NULL) freePoint2D(student->address);
+    if(student->line != (pLine)NULL) freeLine(student->line);
 
     free(student);
 }
@@ -57,13 +60,52 @@ pStudent createStudent(String name, pPoint2D address){
     return stud;
 }
 
-// Functions for getting student data
-String getStudentName(pStudent student){
-    return duplicateString(student->name);
+int findClosestStop(pStudent student){
+    int i = 0;
+    int index = 0;
+    double min = getDistancePoint2D(student->address, student->line->stops[0]);
+    double temp = 0;
+    
+    while(i < student->line->length){
+        temp = getDistancePoint2D(student->address, student->line->stops[i]);
+        if(temp < min){
+            index = i;
+        }
+        i++;
+    }
+
+    return index;
 }
 
-pPoint2D getStudentAddress(pStudent student){
-    return duplicatePoint2D(student->address);
+double findShortestDistance(pStudent student, pLine line){
+    int i = 0;
+    double min = getDistancePoint2D(student->address, line->stops[0]);
+    double temp = 0;
+    while(i < line->length){
+        temp = getDistancePoint2D(student->address, line->stops[i]);
+        if(temp < min){
+            min = temp;
+        }
+        i++;
+    }
+
+    return min;
+}
+
+void assignLineToStudent(pStudent student, pLineListFile lineList){
+    int i = 0;
+    double min = findShortestDistance(student, lineList->lines[0]);
+    double temp;
+    int line = 0;
+    while(i < lineList->length){
+        temp = findShortestDistance(student, lineList->lines[i]);
+        if(temp < min){
+            line = i;
+        }
+        i++;
+    }
+
+    student->line = duplicateLine(lineList->lines[line]);
 }
 
 void studentToString(pStudent student){

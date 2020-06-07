@@ -16,6 +16,7 @@ int main(int argc, char** argv){
     
     studentInputListToString(studentList);
     freeStudentInputList(studentList);
+    printf("\n");
     
     return EXIT_SUCCESS;
 }
