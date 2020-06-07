@@ -69,6 +69,7 @@ int findClosestStop(pStudent student){
     while(i < student->line->length){
         temp = getDistancePoint2D(student->address, student->line->stops[i]);
         if(temp < min){
+            min = temp;
             index = i;
         }
         i++;
@@ -100,6 +101,7 @@ void assignLineToStudent(pStudent student, pLineListFile lineList){
     while(i < lineList->length){
         temp = findShortestDistance(student, lineList->lines[i]);
         if(temp < min){
+            min = temp;
             line = i;
         }
         i++;

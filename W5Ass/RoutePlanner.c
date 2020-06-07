@@ -57,7 +57,7 @@ int main(int argc, char** argv){
         printf("Name: %s\n", studentList->students[i]->name);
         printf("Address Coordinates: %lf %lf\n", studentList->students[i]->address->x, studentList->students[i]->address->y);
         printf("Assigned Line: %s\n", studentList->students[i]->line->name);
-        printf("Stop Number: %d\n", closestStop);
+        printf("Stop Number: %d\n", closestStop+1);
         printf("Stop Coordinates: %lf %lf\n\n", studentList->students[i]->line->stops[closestStop]->x, studentList->students[i]->line->stops[closestStop]->y);
         i++;
     }
