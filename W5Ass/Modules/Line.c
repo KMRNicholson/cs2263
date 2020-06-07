@@ -106,6 +106,7 @@ pLine duplicateLine(pLine line){
             freePoint2DList(stops, line->length);
             break;
         }
+        i++;
     }
 
     if(name != (String)NULL && stops != (pPoint2D*)NULL && dupLine != (pLine)NULL){
