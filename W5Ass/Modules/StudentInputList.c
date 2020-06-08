@@ -34,6 +34,7 @@ pStudentInputList createStudentInputList(){
     pStudentInputList studentList = mallocStudentInputList();
     pPoint2D address = (pPoint2D)NULL;
     String name = (String)NULL;
+    pLine line = mallocLine();
     char input[255];
     double x, y;
     int i = 0;
@@ -61,8 +62,8 @@ pStudentInputList createStudentInputList(){
             studentList->students = (pStudent*)realloc(studentList->students, (i+1)*sizeof(pStudent));
             name = duplicateString(input);
             address = createPoint2D(x, y);
-            if(name != (String)NULL && address != (pPoint2D)NULL && studentList->students != (pStudent*)NULL){
-                studentList->students[i] = createStudent(name, address);
+            if(name != (String)NULL && address != (pPoint2D)NULL && line != (pLine)NULL && studentList->students != (pStudent*)NULL){
+                studentList->students[i] = createStudent(name, address, line);
                 if(studentList->students[i] == (pStudent)NULL){
                     freeString(name);
                     freePoint2D(address);
