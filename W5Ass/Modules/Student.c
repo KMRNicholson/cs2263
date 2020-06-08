@@ -32,10 +32,9 @@ pStudent* mallocStudentList(){
 }
 
 // Function that sets values for the student
-void setStudent(pStudent student, String name, pPoint2D address, pLine line){
+void setStudent(pStudent student, String name, pPoint2D address){
     student->name = name;
     student->address = address;
-    student->line = line;
 }
 
 // Function that free's the student
@@ -59,10 +58,10 @@ void freeStudentList(pStudent* students, int length){
 }
 
 // Function that creates a student
-pStudent createStudent(String name, pPoint2D address, pLine line){
+pStudent createStudent(String name, pPoint2D address){
     pStudent stud = mallocStudent();
     if(stud != (pStudent)NULL){
-        setStudent(stud, name, address, line);
+        setStudent(stud, name, address);
     }
     return stud;
 }

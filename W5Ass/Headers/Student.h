@@ -35,7 +35,7 @@ void freeStudent(pStudent pThis);
 // Function that free's the student list
 void freeStudentList(pStudent* students, int length);
 // Function that creates a student
-pStudent createStudent(String name, pPoint2D address, pLine line);
+pStudent createStudent(String name, pPoint2D address);
 // finds the closest stop to the student based on the line which they are assigned to
 int findClosestStop(pStudent student);
 // finds the line which has the closest stop to the student, and assigns that line to the student
