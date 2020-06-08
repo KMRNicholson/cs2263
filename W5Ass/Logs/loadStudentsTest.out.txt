@@ -1,0 +1,79 @@
+length  type: int       val: 26
+name    type: char*     val: Dante Parker
+x       type: double    val: 0.100000
+y       type: double    val: 0.100000
+name    type: char*     val: Tamir Rice
+x       type: double    val: 6.990000
+y       type: double    val: 6.990000
+name    type: char*     val: Eric Garner
+x       type: double    val: 2.300000
+y       type: double    val: 4.500000
+name    type: char*     val: Phillip White
+x       type: double    val: 0.000000
+y       type: double    val: 0.000000
+name    type: char*     val: Minnijean Brown
+x       type: double    val: 0.000000
+y       type: double    val: 4.200000
+name    type: char*     val: Elizabeth Eckford
+x       type: double    val: 4.200000
+y       type: double    val: 0.000000
+name    type: char*     val: Ernest Green
+x       type: double    val: 7.000000
+y       type: double    val: 4.200000
+name    type: char*     val: Thelma Mothershed
+x       type: double    val: 4.200000
+y       type: double    val: 7.000000
+name    type: char*     val: Melba Patillo
+x       type: double    val: 0.100000
+y       type: double    val: 0.200000
+name    type: char*     val: Gloria Ray
+x       type: double    val: 7.000000
+y       type: double    val: 7.000000
+name    type: char*     val: Terrence Roberts
+x       type: double    val: 1.500000
+y       type: double    val: -5.200000
+name    type: char*     val: Jefferson Thomas
+x       type: double    val: 0.200000
+y       type: double    val: 0.200000
+name    type: char*     val: Carlotta Walls
+x       type: double    val: 4.000000
+y       type: double    val: 4.000000
+name    type: char*     val: Daisy Gaston Bates
+x       type: double    val: 6.990000
+y       type: double    val: 6.990000
+name    type: char*     val: Addie Mae Collins
+x       type: double    val: 1.200000
+y       type: double    val: 3.000000
+name    type: char*     val: Cynthia Wesley
+x       type: double    val: 8.200000
+y       type: double    val: 12.300000
+name    type: char*     val: Carole Robertson
+x       type: double    val: 0.300000
+y       type: double    val: 14.900000
+name    type: char*     val: Carol Denise McNair
+x       type: double    val: 2.100000
+y       type: double    val: 4.500000
+name    type: char*     val: Rosa Parks
+x       type: double    val: 3.100000
+y       type: double    val: 6.500000
+name    type: char*     val: Eric Harris
+x       type: double    val: 5.100000
+y       type: double    val: 4.600000
+name    type: char*     val: Walter Scott
+x       type: double    val: 7.100000
+y       type: double    val: 2.200000
+name    type: char*     val: William Chapman II
+x       type: double    val: 8.300000
+y       type: double    val: 10.900000
+name    type: char*     val: Alonzo Smith
+x       type: double    val: 4.200000
+y       type: double    val: 8.100000
+name    type: char*     val: Alteria Woods
+x       type: double    val: 9.600000
+y       type: double    val: 4.400000
+name    type: char*     val: Jordan Edwards
+x       type: double    val: 4.700000
+y       type: double    val: 5.300000
+name    type: char*     val: Eric Reason
+x       type: double    val: 5.300000
+y       type: double    val: 6.800000

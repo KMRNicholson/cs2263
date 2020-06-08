@@ -1,0 +1,47 @@
+length  type: int       val: 4
+name    type: char*     val: Bailey Drive
+length  type: int       val: 2
+x       type: double    val: 0.000000
+y       type: double    val: 0.000000
+x       type: double    val: 1.000000
+y       type: double    val: 1.000000
+name    type: char*     val: Dineen Drive East
+length  type: int       val: 8
+x       type: double    val: 12.000000
+y       type: double    val: 0.000000
+x       type: double    val: 14.000000
+y       type: double    val: 2.000000
+x       type: double    val: 15.000000
+y       type: double    val: 3.000000
+x       type: double    val: 16.000000
+y       type: double    val: 5.000000
+x       type: double    val: 14.000000
+y       type: double    val: 7.000000
+x       type: double    val: 12.000000
+y       type: double    val: 8.000000
+x       type: double    val: 10.000000
+y       type: double    val: 4.000000
+x       type: double    val: 8.000000
+y       type: double    val: 2.000000
+name    type: char*     val: Mackay Drive
+length  type: int       val: 6
+x       type: double    val: 4.000000
+y       type: double    val: 4.000000
+x       type: double    val: 5.000000
+y       type: double    val: 5.000000
+x       type: double    val: 6.000000
+y       type: double    val: 6.000000
+x       type: double    val: 6.000000
+y       type: double    val: 5.000000
+x       type: double    val: 7.000000
+y       type: double    val: 4.000000
+x       type: double    val: 8.000000
+y       type: double    val: 3.000000
+name    type: char*     val: Beaverbrook Street
+length  type: int       val: 3
+x       type: double    val: 28.000000
+y       type: double    val: 2.000000
+x       type: double    val: 34.000000
+y       type: double    val: 5.000000
+x       type: double    val: 28.000000
+y       type: double    val: 4.000000

@@ -1,0 +1,155 @@
+Name: Dante Parker
+Address Coordinates: 0.100000 0.100000
+Assigned Line: Bailey Drive
+Stop Number: 1
+Stop Coordinates: 0.000000 0.000000
+
+Name: Tamir Rice
+Address Coordinates: 6.990000 6.990000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
+
+Name: Eric Garner
+Address Coordinates: 2.300000 4.500000
+Assigned Line: Mackay Drive
+Stop Number: 1
+Stop Coordinates: 4.000000 4.000000
+
+Name: Phillip White
+Address Coordinates: 0.000000 0.000000
+Assigned Line: Bailey Drive
+Stop Number: 1
+Stop Coordinates: 0.000000 0.000000
+
+Name: Minnijean Brown
+Address Coordinates: 0.000000 4.200000
+Assigned Line: Bailey Drive
+Stop Number: 2
+Stop Coordinates: 1.000000 1.000000
+
+Name: Elizabeth Eckford
+Address Coordinates: 4.200000 0.000000
+Assigned Line: Bailey Drive
+Stop Number: 2
+Stop Coordinates: 1.000000 1.000000
+
+Name: Ernest Green
+Address Coordinates: 7.000000 4.200000
+Assigned Line: Mackay Drive
+Stop Number: 5
+Stop Coordinates: 7.000000 4.000000
+
+Name: Thelma Mothershed
+Address Coordinates: 4.200000 7.000000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
+
+Name: Melba Patillo
+Address Coordinates: 0.100000 0.200000
+Assigned Line: Bailey Drive
+Stop Number: 1
+Stop Coordinates: 0.000000 0.000000
+
+Name: Gloria Ray
+Address Coordinates: 7.000000 7.000000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
+
+Name: Terrence Roberts
+Address Coordinates: 1.500000 -5.200000
+Assigned Line: Bailey Drive
+Stop Number: 1
+Stop Coordinates: 0.000000 0.000000
+
+Name: Jefferson Thomas
+Address Coordinates: 0.200000 0.200000
+Assigned Line: Bailey Drive
+Stop Number: 1
+Stop Coordinates: 0.000000 0.000000
+
+Name: Carlotta Walls
+Address Coordinates: 4.000000 4.000000
+Assigned Line: Mackay Drive
+Stop Number: 1
+Stop Coordinates: 4.000000 4.000000
+
+Name: Daisy Gaston Bates
+Address Coordinates: 6.990000 6.990000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
+
+Name: Addie Mae Collins
+Address Coordinates: 1.200000 3.000000
+Assigned Line: Bailey Drive
+Stop Number: 2
+Stop Coordinates: 1.000000 1.000000
+
+Name: Cynthia Wesley
+Address Coordinates: 8.200000 12.300000
+Assigned Line: Dineen Drive East
+Stop Number: 6
+Stop Coordinates: 12.000000 8.000000
+
+Name: Carole Robertson
+Address Coordinates: 0.300000 14.900000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
+
+Name: Carol Denise McNair
+Address Coordinates: 2.100000 4.500000
+Assigned Line: Mackay Drive
+Stop Number: 1
+Stop Coordinates: 4.000000 4.000000
+
+Name: Rosa Parks
+Address Coordinates: 3.100000 6.500000
+Assigned Line: Mackay Drive
+Stop Number: 2
+Stop Coordinates: 5.000000 5.000000
+
+Name: Eric Harris
+Address Coordinates: 5.100000 4.600000
+Assigned Line: Mackay Drive
+Stop Number: 2
+Stop Coordinates: 5.000000 5.000000
+
+Name: Walter Scott
+Address Coordinates: 7.100000 2.200000
+Assigned Line: Dineen Drive East
+Stop Number: 8
+Stop Coordinates: 8.000000 2.000000
+
+Name: William Chapman II
+Address Coordinates: 8.300000 10.900000
+Assigned Line: Dineen Drive East
+Stop Number: 6
+Stop Coordinates: 12.000000 8.000000
+
+Name: Alonzo Smith
+Address Coordinates: 4.200000 8.100000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
+
+Name: Alteria Woods
+Address Coordinates: 9.600000 4.400000
+Assigned Line: Dineen Drive East
+Stop Number: 7
+Stop Coordinates: 10.000000 4.000000
+
+Name: Jordan Edwards
+Address Coordinates: 4.700000 5.300000
+Assigned Line: Mackay Drive
+Stop Number: 2
+Stop Coordinates: 5.000000 5.000000
+
+Name: Eric Reason
+Address Coordinates: 5.300000 6.800000
+Assigned Line: Mackay Drive
+Stop Number: 3
+Stop Coordinates: 6.000000 6.000000
