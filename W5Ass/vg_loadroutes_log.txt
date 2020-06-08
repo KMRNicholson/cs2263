@@ -1,0 +1,77 @@
+==31822== Memcheck, a memory error detector
+==31822== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==31822== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==31822== Command: ./loadRoutesTest A5Data/busroutes.txt
+==31822== Parent PID: 31801
+==31822== 
+--31822-- 
+--31822-- Valgrind options:
+--31822--    --tool=memcheck
+--31822--    --leak-check=full
+--31822--    --verbose
+--31822--    --log-file=vg_loadroutes_log.txt
+--31822-- Contents of /proc/version:
+--31822--   Linux version 3.10.0-957.27.2.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-36) (GCC) ) #1 SMP Mon Jul 29 17:46:05 UTC 2019
+--31822-- 
+--31822-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-avx-avx2-bmi
+--31822-- Page sizes: currently 4096, max supported 4096
+--31822-- Valgrind library directory: /usr/lib64/valgrind
+--31822-- Reading syms from /home1/ugrads/knichol1/cs2263/W5Ass/loadRoutesTest
+--31822-- Reading syms from /usr/lib64/ld-2.17.so
+--31822-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--31822--    object doesn't have a symbol table
+--31822--    object doesn't have a dynamic symbol table
+--31822-- Scheduler: using generic scheduler lock implementation.
+--31822-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==31822== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-31822-by-knichol1-on-id415m13.cs.unb.ca
+==31822== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-31822-by-knichol1-on-id415m13.cs.unb.ca
+==31822== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-31822-by-knichol1-on-id415m13.cs.unb.ca
+==31822== 
+==31822== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==31822== don't want to do, unless you know exactly what you're doing,
+==31822== or are doing some strange experiment):
+==31822==   /usr/lib64/valgrind/../../bin/vgdb --pid=31822 ...command...
+==31822== 
+==31822== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==31822==   /path/to/gdb ./loadRoutesTest
+==31822== and then give GDB the following command
+==31822==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=31822
+==31822== --pid is optional if only one valgrind process is running
+==31822== 
+--31822-- REDIR: 0x4019d60 (ld-linux-x86-64.so.2:strlen) redirected to 0x58059dd1 (???)
+--31822-- REDIR: 0x4019b30 (ld-linux-x86-64.so.2:index) redirected to 0x58059deb (???)
+--31822-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--31822-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+==31822== WARNING: new redirection conflicts with existing -- ignoring it
+--31822--     old: 0x04019d60 (strlen              ) R-> (0000.0) 0x58059dd1 ???
+--31822--     new: 0x04019d60 (strlen              ) R-> (2007.0) 0x04c2ca70 strlen
+--31822-- REDIR: 0x4019ce0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2dbc0 (strcmp)
+--31822-- REDIR: 0x401a9a0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c30c40 (mempcpy)
+--31822-- Reading syms from /usr/lib64/libm-2.17.so
+--31822-- Reading syms from /usr/lib64/libc-2.17.so
+--31822-- REDIR: 0x51c7880 (libc.so.6:strcasecmp) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x51c4600 (libc.so.6:strnlen) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x51c9b50 (libc.so.6:strncasecmp) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x51c7060 (libc.so.6:memset) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x51c7010 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x51c5ff0 (libc.so.6:__GI_strrchr) redirected to 0x4c2c430 (__GI_strrchr)
+--31822-- REDIR: 0x51bd2e0 (libc.so.6:malloc) redirected to 0x4c29b3c (malloc)
+--31822-- REDIR: 0x51dd070 (libc.so.6:__GI_strstr) redirected to 0x4c30ed0 (__strstr_sse2)
+--31822-- REDIR: 0x51c4520 (libc.so.6:__GI_strlen) redirected to 0x4c2c9d0 (__GI_strlen)
+--31822-- REDIR: 0x51c44d0 (libc.so.6:strlen) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x527e100 (libc.so.6:__strlen_sse42) redirected to 0x4c2ca30 (__strlen_sse42)
+--31822-- REDIR: 0x51c5f70 (libc.so.6:strncpy) redirected to 0x4a24740 (_vgnU_ifunc_wrapper)
+--31822-- REDIR: 0x5299d40 (libc.so.6:__strncpy_ssse3) redirected to 0x4c2cc50 (strncpy)
+--31822-- REDIR: 0x51bd700 (libc.so.6:free) redirected to 0x4c2ac36 (free)
+--31822-- REDIR: 0x51cdb10 (libc.so.6:strchrnul) redirected to 0x4c30760 (strchrnul)
+--31822-- REDIR: 0x51c7230 (libc.so.6:__GI_mempcpy) redirected to 0x4c30970 (__GI_mempcpy)
+--31822-- REDIR: 0x51cc290 (libc.so.6:__GI_memcpy) redirected to 0x4c2e560 (__GI_memcpy)
+==31822== 
+==31822== HEAP SUMMARY:
+==31822==     in use at exit: 0 bytes in 0 blocks
+==31822==   total heap usage: 34 allocs, 34 frees, 1,231 bytes allocated
+==31822== 
+==31822== All heap blocks were freed -- no leaks are possible
+==31822== 
+==31822== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==31822== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
