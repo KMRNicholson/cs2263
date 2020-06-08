@@ -60,10 +60,10 @@ clean:
 # VALGRINDING - tests program output and also discovers memory leaks
 
 valgrind_RoutePlanner: RoutePlanner
-	$(VAL) ./RoutePlanner A5Data/busroutes.txt < A5Data/students.txt
+	$(VAL) $(VAL_OPTIONS)vg_routeplanner_log.txt ./RoutePlanner A5Data/busroutes.txt < A5Data/students.txt
 
 valgrind_loadRoutes: loadRoutesTest
-	$(VAL) ./loadRoutesTest A5Data/busroutes.txt
+	$(VAL) $(VAL_OPTIONS)vg_loadroutes_log.txt ./loadRoutesTest A5Data/busroutes.txt
 
 valgrind_loadStudents: loadStudentsTest
-	$(VAL) ./loadStudentsTest < A5Data/students.txt
+	$(VAL) $(VAL_OPTIONS)vg_loadstudents_log.txt ./loadStudentsTest < A5Data/students.txt
