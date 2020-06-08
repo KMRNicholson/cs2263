@@ -35,7 +35,7 @@ pStudent* mallocStudentList(){
 void setStudent(pStudent student, String name, pPoint2D address, pLine line){
     student->name = name;
     student->address = address;
-    student->line = 
+    student->line = line;
 }
 
 // Function that free's the student
