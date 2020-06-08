@@ -74,18 +74,18 @@ pLine createLine(int length, String name, pPoint2D* stops){
 // Function which scans a bus line from a file.
 pLine fgetLine(FILE* file){
     int i, stops;
-    fscanf(file, "%d ", &stops);
+    fscanf(file, "%d ", &stops); // get the number of bus stop for a line
     pLine line = (pLine)NULL;
 
     pPoint2D* points = mallocPoint2DList(stops);
 
     i = 0;
     if(points != (pPoint2D*)NULL){
-        while(i < stops){
+        while(i < stops){ // For each stop, we need to get the related data from the routes file
             points[i] = fgetPoint2D(file);
-            if(points[i] == (pPoint2D)NULL){
+            if(points[i] == (pPoint2D)NULL){ // If we somehow manage to fail to allocate memory, abort, free everything, fail program
                 freePoint2DList(points, stops);
-                return line;
+                return line; // This will return a NULL, which will cause the program to exit safely in later checks
             }
             i++;
         }
@@ -93,7 +93,7 @@ pLine fgetLine(FILE* file){
 
     String streetName = fgetString(file);
 
-    if(streetName != (String)NULL && points != (pPoint2D*)NULL){
+    if(streetName != (String)NULL && points != (pPoint2D*)NULL){ // If all structs allocated properly, create the line
         line = createLine(stops, streetName, points);
     }
 
@@ -104,10 +104,10 @@ pLine fgetLine(FILE* file){
 pLine duplicateLine(pLine line){
     int i = 0;
     pLine dupLine = mallocLine();
-    String name = duplicateString(line->name);
+    String name = duplicateString(line->name); // We must also deep copy the structs pointed to by the given line
     pPoint2D* stops = mallocPoint2DList(line->length);
 
-    while(i < line->length){
+    while(i < line->length){ // This deep copies all the bus stops for a line
         stops[i] = duplicatePoint2D(line->stops[i]);
         if(stops[i] == (pPoint2D)NULL){
             freePoint2DList(stops, line->length);
@@ -117,9 +117,7 @@ pLine duplicateLine(pLine line){
     }
 
     if(name != (String)NULL && stops != (pPoint2D*)NULL && dupLine != (pLine)NULL){
-        dupLine->length = line->length;
-        dupLine->name = name;
-        dupLine->stops = stops;
+        setLine(dupLine, line->length, name, stops);
     }
 
     return dupLine;

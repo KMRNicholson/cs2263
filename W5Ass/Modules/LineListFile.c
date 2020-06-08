@@ -24,17 +24,20 @@ pLineListFile mallocLineListFile(){
     return (pLineListFile)malloc(sizeof(LineListFile));
 }
 
+// Function that free's a lineListFile struct
 void freeLineListFile(pLineListFile lineList){
     if(lineList->lines != (pLine*)NULL) freeLineList(lineList->lines, lineList->length);
     free(lineList);
 }
 
+// Function that gets the amount of bus routes in a file
 int fgetLineNum(FILE* file){
     int lineNum = 0;
     fscanf(file, "%d\n", &lineNum);
     return lineNum;
 }
 
+// Function which creates a lineListFile struct based on the given busroutes file
 pLineListFile createLineListFile(FILE* file){
     pLineListFile lineList = mallocLineListFile();
     int i = 0;
@@ -59,6 +62,7 @@ pLineListFile createLineListFile(FILE* file){
     return lineList;
 }
 
+// Function which displayes the inner values of the lineListFile struct
 void lineListFileToString(pLineListFile lineList){
     int i = 0;
     printf("\nlength\ttype: int\tval: %d", lineList->length);

@@ -1,6 +1,6 @@
 #########################################
 # 
-# Makefile for compiling and testing htags.c and parser.c functions
+# Makefile for compiling and testing the RoutePlanner program
 #
 # Created by Kohdy Nicholson
 #
@@ -26,21 +26,26 @@ help:
 	@printf "	make loadStudentsTest       (builds the driver to test the loading of students)\n"
 	@printf "	make modules                (builds the modules that used)\n"
 	@printf "	make clean                  (cleans object files in the current folder)\n"
-	@printf "	make valgind_RoutePlanner   (run memory leak test for main program)\n"
+	@printf "	make valgrind               (cleans object files in the current folder)\n"
+	@printf "	make valgrind_RoutePlanner  (run memory leak test for main program)\n"
 	@printf "	make valgrind_loadRoutes    (run memory leak tests for loading routes)\n"
 	@printf "	make valgrind_loadStudents  (run memory leak tests for loading students)\n"
 	
-# link our .o files to make an executable
+# link our .o files to make executables for our main drivers
 all: RoutePlanner loadRoutesTest loadStudentsTest valgrind clean
 
-RoutePlanner: clean RoutePlanner.o modules.o
+RoutePlanner: clean RoutePlanner.o modules
 	$(COMPILER) $(C_FLAGS) -o RoutePlanner *.o
 
-loadRoutesTest: clean loadRoutesTest.o modules.o
+loadRoutesTest: clean loadRoutesTest.o modules
 	$(COMPILER) $(C_FLAGS) -o loadRoutesTest *.o
 
-loadStudentsTest: clean loadStudentsTest.o modules.o
+loadStudentsTest: clean loadStudentsTest.o modules
 	$(COMPILER) $(C_FLAGS) -o loadStudentsTest *.o
+
+# targets for compiling our .c files in modules and the main drivers.
+modules:
+	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
 
 RoutePlanner.o: RoutePlanner.c
 	$(COMPILER) $(C_FLAGS) -c RoutePlanner.c
@@ -51,14 +56,12 @@ loadRoutesTest.o: loadRoutesTest.c
 loadStudentsTest.o: loadStudentsTest.c
 	$(COMPILER) $(C_FLAGS) -c loadStudentsTest.c
 
-modules.o:
-	$(COMPILER) $(C_FLAGS) -c ./Modules/*.c
-
+# cleans all of the object files in the current directory
 clean:
 	rm -f *.o
 
-######################################
-# VALGRINDING
+####################################################################
+# VALGRINDING - tests program output and also discovers memory leaks
 
 valgrind: valgrind_RoutePlanner valgrind_loadRoutes valgrind_loadStudents
 

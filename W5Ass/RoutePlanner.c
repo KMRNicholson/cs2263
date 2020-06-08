@@ -39,7 +39,7 @@ int main(int argc, char** argv){
 
     pLineListFile lineListFile = createLineListFile(file);
     if(lineListFile == (pLineListFile)NULL){
-        printf("Failed to allocate memory. Exiting..");
+        printf("Failed to allocate memory. Exiting..\n");
         return EXIT_FAILURE;
     }
 
@@ -47,7 +47,7 @@ int main(int argc, char** argv){
 
     pStudentInputList studentList = createStudentInputList();
     if(studentList == (pStudentInputList)NULL){
-        printf("Failed to allocate memory. Exiting..");
+        printf("Failed to allocate memory. Exiting..\n");
         return EXIT_FAILURE;
     }
     

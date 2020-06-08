@@ -1,3 +1,16 @@
+/* 
+    loadStudentsTest.c
+
+    Description:
+    Test driver to ensure students are loaded from stdin, into a StudentInputList struct.
+
+    Author: 
+    Kohdy Nicholson
+    
+    Date: 
+    2020-06-07
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "Headers/LineListFile.h"
@@ -10,7 +23,7 @@
 int main(int argc, char** argv){
     pStudentInputList studentList = createStudentInputList();
     if(studentList == (pStudentInputList)NULL){
-        printf("Failed to allocate memory. Exiting..");
+        printf("Failed to allocate memory. Exiting..\n");
         return EXIT_FAILURE;
     }
     

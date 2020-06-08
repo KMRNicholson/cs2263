@@ -36,11 +36,11 @@ void freeStudent(pStudent pThis);
 void freeStudentList(pStudent* students, int length);
 // Function that creates a student
 pStudent createStudent(String name, pPoint2D address);
-// prints the student values to the console
-void studentToString(pStudent student);
 // finds the closest stop to the student based on the line which they are assigned to
 int findClosestStop(pStudent student);
 // finds the line which has the closest stop to the student, and assigns that line to the student
 void assignLineToStudent(pStudent student, pLineListFile lineList);
+// prints the student values to the console
+void studentToString(pStudent student);
 
 #endif
