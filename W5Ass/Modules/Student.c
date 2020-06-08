@@ -62,7 +62,7 @@ void freeStudentList(pStudent* students, int length){
 pStudent createStudent(String name, pPoint2D address, pLine line){
     pStudent stud = mallocStudent();
     if(stud != (pStudent)NULL){
-        setStudent(stud, name, address);
+        setStudent(stud, name, address, line);
     }
     return stud;
 }
