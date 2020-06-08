@@ -25,7 +25,6 @@ help:
 	@printf "	make loadStudentsTest       (builds the driver to test the loading of students)\n"
 	@printf "	make modules                (builds the modules that used)\n"
 	@printf "	make clean                  (cleans object files in the current folder)\n"
-	@printf "	make valgrind               (cleans object files in the current folder)\n"
 	@printf "	make valgrind_RoutePlanner  (run memory leak test for main program)\n"
 	@printf "	make valgrind_loadRoutes    (run memory leak tests for loading routes)\n"
 	@printf "	make valgrind_loadStudents  (run memory leak tests for loading students)\n"
@@ -59,8 +58,6 @@ clean:
 
 ####################################################################
 # VALGRINDING - tests program output and also discovers memory leaks
-
-valgrind: valgrind_RoutePlanner valgrind_loadRoutes valgrind_loadStudents
 
 valgrind_RoutePlanner: RoutePlanner
 	$(VAL) cat A5Data/students.txt | ./RoutePlanner A5Data/busroutes.txt $(VAL_OPTIONS)
