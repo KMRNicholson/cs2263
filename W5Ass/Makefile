@@ -20,7 +20,6 @@ VAL_OPTIONS = --tool=memcheck --leak-check=full --verbose --log-file=
 help:
 	@printf "available command:\n"
 	@printf "	make help                   (this command)\n"
-	@printf "	make all                    (builds every target)\n"
 	@printf "	make RoutePlanner           (builds the main program)\n"
 	@printf "	make loadRoutesTest         (builds the driver to test the loading of bus routes)\n"
 	@printf "	make loadStudentsTest       (builds the driver to test the loading of students)\n"
@@ -32,8 +31,6 @@ help:
 	@printf "	make valgrind_loadStudents  (run memory leak tests for loading students)\n"
 	
 # link our .o files to make executables for our main drivers
-all: RoutePlanner loadRoutesTest loadStudentsTest valgrind clean
-
 RoutePlanner: clean RoutePlanner.o modules
 	$(COMPILER) $(C_FLAGS) -o RoutePlanner *.o
 
