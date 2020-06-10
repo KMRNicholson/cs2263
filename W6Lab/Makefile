@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -pg -std=c99
 HEADERS = Point.h
 OBJS =    Point.o
-TARGETS = genPointsTxt genPointsBin genPointsBlob pointsTxt2Bin pointsBin2Txt pointsSeekBin
+TARGETS = genPointsTxt genPointsBin genPointsBlob genIntBin pointsTxt2Bin pointsBin2Txt pointsSeekBin
 INSTALL_DIR = ./bin
 
 install: all
@@ -16,6 +16,9 @@ genPointsBin: genPointsBin.o $(OBJS)
 
 genPointsBlob: genPointsBlob.o $(OBJS)
 	$(CC) -o $@ genPointsBlob.o $(CFLAGS) $(OBJS)
+
+genIntBin: genIntBin.o $(OBJS)
+	$(CC) -o $@ genIntBin.o $(CFLAGS)
 
 pointsTxt2Bin: pointsTxt2Bin.o $(OBJS)
 	$(CC) -o $@ pointsTxt2Bin.o $(CFLAGS) $(OBJS)
