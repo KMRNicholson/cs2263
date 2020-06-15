@@ -60,8 +60,7 @@ void destroyLink(pLink link){
 
 void destroyLinks(pLink link){
     if(link != (pLink)NULL){
-        destroyLink(link->next);
-        freePoint2D(link->point);
+        destroyLinks(link->next);
         destroyLink(link);
     }
 }
