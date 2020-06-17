@@ -24,7 +24,7 @@ void swap(void** x, void** y){
 }
 
 void customSort(void** arr, int arr_size, int (*fun_ptr)(const void* x, const void* y)){
-    int i, j, min, result;
+    int i, j, min;
 
     i = 0;
     while(i < arr_size-1){

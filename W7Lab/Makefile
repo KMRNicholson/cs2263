@@ -10,7 +10,7 @@
 COMPILER = gcc
 
 # The C flags to pass to gcc
-C_FLAGS = -Wall -g
+C_FLAGS = -Wall -g -lm
 
 # prepend the command with '@' so that Make does not print the command before running it 
 help:
