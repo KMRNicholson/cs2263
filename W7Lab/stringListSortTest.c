@@ -23,8 +23,8 @@ void swap(void** x, void** y){
     *y = temp;
 }
 
-void customSort(void** arr, int arr_size, int byte_size, int (*fun_ptr)(const void* x, const void* y)){
-    int i, j, min, result;
+void customSort(void** arr, int arr_size, int (*fun_ptr)(const void* x, const void* y)){
+    int i, j, min;
 
     i = 0;
     while(i < arr_size-1){
@@ -51,7 +51,7 @@ int main(int argc, char** argv){
         return EXIT_FAILURE;
     }
 
-    customSort((void**)dupList, argc-1, sizeof(String), stringCompare);
+    customSort((void**)dupList, argc-1, stringCompare);
 
     i = 0;
     while(i < argc-1){
